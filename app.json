@@ -5,6 +5,7 @@
   },
   "version": "1.6.5",
   "compatibility": ">=1.5.0",
+  "sdk": 2,
   "category": [
     "appliances",
     "lights",
@@ -39,5 +40,335 @@
         "email": "jolnyx@gmail.com"
       }
     ]
-  }
+  },
+  "drivers": [
+    {
+      "id": "ZW121",
+      "name": {
+        "en": "LED Strip"
+      },
+      "class": "light",
+      "capabilities": [
+        "light_saturation",
+        "light_temperature",
+        "dim",
+        "light_hue",
+        "light_mode",
+        "onoff"
+      ],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        },
+        "dim": {
+          "opts": {
+            "duration": true
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/ZW121/assets/images/large.png",
+        "small": "/drivers/ZW121/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          121
+        ],
+        "zwaveAllianceProductId": 2000,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2000/LED Strip manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW121/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on the LED Strip Controller. \n For secure pairing press the button twice.",
+            "nl": "Druk eenmaal op de actie knop op de LED Strip Controller. \n Voor beveiligd koppelen drukt u tweemaal op de knop."
+          }
+        },
+        "associationGroups": [
+          2
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "The association group 1 is the Z-Wave Lifeline group. The Hail CC and Basic Report CC (configurable) will be sent to the associated nodes.",
+              "nl": "De 1e associatie groep is de Z-Wave levenslijn groep. De Hail CC en Basic Report CC (configureerbaar) worden verzonden naar de apparaten in deze groep."
+            }
+          },
+          "2": {
+            "hint": {
+              "en": "Forwarding group for all commands sent to the LED Strip by the main controller.",
+              "nl": "Doorstuur groep voor alle commando's verstuurd naar de LED Strip door de main controller."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "power_off_state_recovery",
+          "type": "dropdown",
+          "label": {
+            "en": "State recovery after power loss",
+            "nl": "Status herstel na stroomuitval"
+          },
+          "hint": {
+            "en": "This parameter (20) determines the behaviour of the LED Strip after power loss.",
+            "nl": "Deze parameter (20) bepaalt het gedrag van de LED Strip na stroomuitval."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Recover last state before power loss",
+                "nl": "Herstel de laatste status voor de stroomuitval"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Always turn on",
+                "nl": "Altijd aan"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Always turn off",
+                "nl": "Altijd uit"
+              }
+            }
+          ]
+        },
+        {
+          "id": "report_color_change",
+          "type": "checkbox",
+          "label": {
+            "en": "Report color change",
+            "nl": "Rapporteer kleurverandering"
+          },
+          "hint": {
+            "en": "This parameter (32) determines whether or not the LED Strip reports color changes.",
+            "nl": "Deze parameter (32) bepaalt of de LED Strip zijn kleurveranderingen rapporteerd."
+          },
+          "zwave": {
+            "index": 32,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "color_switch_last_brightness",
+          "type": "checkbox",
+          "label": {
+            "en": "Set last brightness level on color switch",
+            "nl": "Zet het laatste helderheids niveau op kleurverandering"
+          },
+          "hint": {
+            "en": "This parameter (34) determines whether or not the LED Strip turns to it's last brightness setting when receiving the Color Switch Set Command.",
+            "nl": "Deze parameter (34) bepaalt of de LED Strip het laatste helderheidsniveau instelt bij het ontvangen van een Color Switch Set commando."
+          },
+          "zwave": {
+            "index": 34,
+            "size": 1
+          },
+          "value": false
+        },
+        {
+          "id": "white_display_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Cold/warm white display mode",
+            "nl": "Koud/warm wit weergave modus"
+          },
+          "hint": {
+            "en": "This parameter (35) determines the display mode for displaying cold or warm white.",
+            "nl": "Deze parameter (35) bepaalt de weergave modus voor het koude en warme witte licht."
+          },
+          "zwave": {
+            "index": 35,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Arbitrary combination of cold and warm light",
+                "nl": "Arbitraire combinatie tussen koud en warm licht"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Complementary combination of cold and warm light",
+                "nl": "Complementaire combinatie tussen koud en warm licht"
+              }
+            }
+          ]
+        },
+        {
+          "id": "colorful_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Standard color animations",
+            "nl": "Standaard geanimeerde kleuren"
+          },
+          "hint": {
+            "en": "This parameter (40) sets the LED Strip to display one of the standard color animations.",
+            "nl": "Deze parameter (40) laat de LED Strip een van de standaard animaties weergeven."
+          },
+          "zwave": {
+            "index": 40,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "None, turned off",
+                "nl": "Geen, uitgeschakeld"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Rainbow mode",
+                "nl": "Regenboog modus"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Multi color mode",
+                "nl": "Multi color modus"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Blink red",
+                "nl": "Knipperend rood"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Blink green",
+                "nl": "Knipperend groen"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Blink blue",
+                "nl": "Knipperend blauw"
+              }
+            }
+          ]
+        },
+        {
+          "id": "state_change_reports",
+          "type": "dropdown",
+          "label": {
+            "en": "Notifications to association group 1",
+            "nl": "Notificaties richting assocatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter (80) determines the notification command class used for notifications to the 1st association group.",
+            "nl": "Deze parameter (80) bepaalt welke command class er wordt gebruikt voor notificaties richting de 1ste associatie groep."
+          },
+          "zwave": {
+            "index": 80,
+            "size": 1
+          },
+          "value": "3",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled, none sent",
+                "nl": "Uitgeschakelt, er wordt niets verstuurd"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Hail command",
+                "nl": "Hail commando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Basic command",
+                "nl": "Basic commando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Hail command on action button press",
+                "nl": "Hail commando bij indrukken van de actie knop"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dimmer_mode",
+          "type": "dropdown",
+          "label": {
+            "en": "Set the Dimmer mode",
+            "nl": "Stel de dim modus in"
+          },
+          "hint": {
+            "en": "This parameter (112) determines the dimmer mode for the LED Strip",
+            "nl": "Deze parameter (112) bepaalt de dim modus voor de LED Strip"
+          },
+          "zwave": {
+            "index": 112,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Parabolic curve",
+                "nl": "Prabolische curve"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Index curve",
+                "nl": "Index curve"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "(Parabolic + Index)/2",
+                "nl": "(Parabolisch + index)/2"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Linear",
+                "nl": "Lineair"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
