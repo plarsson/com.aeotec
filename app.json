@@ -40,5 +40,1098 @@
         "email": "jolnyx@gmail.com"
       }
     ]
-  }
+  },
+  "drivers": [
+    {
+      "id": "ZW100",
+      "name": {
+        "en": "Multisensor 6"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "measure_humidity",
+        "measure_luminance",
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_temperature",
+        "measure_ultraviolet"
+      ],
+      "images": {
+        "large": "/drivers/ZW100/assets/images/large.png",
+        "small": "/drivers/ZW100/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          100
+        ],
+        "zwaveAllianceProductId": 2714,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2714/Aeon Labs MultiSensor 6 manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW100/assets/learnmode.svg",
+          "instruction": {
+            "en": "Press the action button on your Multisensor 6. For secure pairing press this button twice.",
+            "nl": "Druk op de actie knop op de Multisensor 6. Voor beveiligd koppelen druk tweemaal op deze knop."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "This is the lifeline, it is not recommended to remove Homey's id from this association group.",
+              "nl": "Dit is de levenslijn, het is niet aangeraden om Homey's zijn id te verwijderen uit deze associatie groep."
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 5,
+            "value": 2,
+            "size": 1
+          },
+          {
+            "id": 40,
+            "value": 1,
+            "size": 1
+          },
+          {
+            "id": 111,
+            "value": 600,
+            "size": 4
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "100",
+          "value": 0,
+          "label": {
+            "en": "Set the parameter 101-103 to default values."
+          },
+          "hint": {
+            "en": "Set the parameter 101-103 to default values."
+          },
+          "zwave": {
+            "index": 100,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 1
+          },
+          "type": "number"
+        },
+        {
+          "id": "101",
+          "value": "241",
+          "label": {
+            "en": "To set which report would be sent in Report group 1"
+          },
+          "hint": {
+            "en": "To set which report would be sent in Report group 1.\r\n\r\nNote:\r\nYou can also set all sensor reports to be sent out at the same time. E.g. If you want the batter report and temperature report to be sent out at the same time, you just need to set the configuration value to 33 (1+32).  "
+          },
+          "zwave": {
+            "index": 101,
+            "size": 4
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Battery Report is enabled."
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "Ultraviolet Report is enabled."
+              }
+            },
+            {
+              "id": "32",
+              "label": {
+                "en": "Temperature Report is enabled."
+              }
+            },
+            {
+              "id": "64",
+              "label": {
+                "en": "Humidity Report is enabled."
+              }
+            },
+            {
+              "id": "128",
+              "label": {
+                "en": "Luminance Report is enabled."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "102",
+          "value": "0",
+          "label": {
+            "en": "To set which report would be sent in Report group 2"
+          },
+          "hint": {
+            "en": "To set which report would be sent in Report group 2.\r\n\r\nNote:\r\nYou can also set all sensor reports to be sent out at the same time. E.g. If you want the batter report and temperature report to be sent out at the same time, you just need to set the configuration value to 33 (1+32).  "
+          },
+          "zwave": {
+            "index": 102,
+            "size": 4
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Battery Report is enabled."
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "Ultraviolet Report is enabled."
+              }
+            },
+            {
+              "id": "32",
+              "label": {
+                "en": "Temperature Report is enabled."
+              }
+            },
+            {
+              "id": "64",
+              "label": {
+                "en": "Humidity Report is enabled."
+              }
+            },
+            {
+              "id": "128",
+              "label": {
+                "en": "Luminance Report is enabled."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "103",
+          "value": "0",
+          "label": {
+            "en": "To set which report would be sent in Report group 3"
+          },
+          "hint": {
+            "en": "To set which report would be sent in Report group 3.\r\nNote:\r\nYou can also set all sensor reports to be sent out at the same time. E.g. If you want the batter report and temperature report to be sent out at the same time, you just need to set the configuration value to 33 (1+32).  "
+          },
+          "zwave": {
+            "index": 103,
+            "size": 4
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Battery Report is enabled."
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "Ultraviolet Report is enabled."
+              }
+            },
+            {
+              "id": "32",
+              "label": {
+                "en": "Temperature Report is enabled."
+              }
+            },
+            {
+              "id": "64",
+              "label": {
+                "en": "Humidity Report is enabled."
+              }
+            },
+            {
+              "id": "128",
+              "label": {
+                "en": "Luminance Report is enabled."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "111",
+          "value": 3600,
+          "label": {
+            "en": "To set the interval time of sending reports in Report group 1"
+          },
+          "hint": {
+            "en": "To set the interval time of sending reports in Report group 1"
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 5,
+            "max": 2678400
+          },
+          "type": "number"
+        },
+        {
+          "id": "112",
+          "value": 3600,
+          "label": {
+            "en": "To set the interval time of sending reports in Report group 2"
+          },
+          "hint": {
+            "en": "To set the interval time of sending reports in Report group 2"
+          },
+          "zwave": {
+            "index": 112,
+            "size": 4
+          },
+          "attr": {
+            "min": 5,
+            "max": 2678400
+          },
+          "type": "number"
+        },
+        {
+          "id": "113",
+          "value": 3600,
+          "label": {
+            "en": "To set the interval time of sending reports in Report group 3"
+          },
+          "hint": {
+            "en": "To set the interval time of sending reports in Report group 3"
+          },
+          "zwave": {
+            "index": 113,
+            "size": 4
+          },
+          "attr": {
+            "min": 5,
+            "max": 2678400
+          },
+          "type": "number"
+        },
+        {
+          "id": "2",
+          "value": false,
+          "label": {
+            "en": "Enable/Disable waking up for 10 minutes when re-power on (battery mode) the MultiSensor."
+          },
+          "hint": {
+            "en": "Enable/Disable waking up for 10 minutes when re-power on (battery mode) the MultiSensor."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "201",
+          "value": 0,
+          "label": {
+            "en": "Temperature sensor calibration"
+          },
+          "hint": {
+            "en": "Temperature sensor calibration.\r\nNote:\r\n1.\tHigh byte is the calibration value. Low byte is the unit (0x01=Celsius, 0x02=Fahrenheit)\r\n2.\tThe calibration value (high byte) contains one decimal point. E.g. if the value is set to 20 (0x1401), the calibration value is 2.0 ℃ (EU/AU version) or if the value is set to 20 (0x1402), the calibration value is 2.0 ℉(US version)\r\n3.\tThe calibration value (high byte) = standard value - measure value.\r\nE.g.  If measure value =25.3℃ and the standard value = 23.2℃, so the calibration value= 23.2℃ - 25.3℃= -2.1℃ (0xEB).\r\nIf the measure value =30.1℃ and the standard value = 33.2℃, so the calibration value= 33.2℃ - 30.1℃=3.1℃ (0x1F)."
+          },
+          "zwave": {
+            "index": 201,
+            "size": 2
+          },
+          "attr": {
+            "min": -128,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "202",
+          "value": 0,
+          "label": {
+            "en": "Humidity sensor calibration"
+          },
+          "hint": {
+            "en": "Humidity sensor calibration.\r\nThe calibration value = standard value - measure value.\r\nE.g.  If measure value =80RH and the standard value = 75RH, so the calibration value= 75RH – 80RH= -5RH (0xFB).\r\nIf the measure value =85RH and the standard value = 90RH, so the calibration value= 90RH – 85RH=5RH (0x05).\r\n"
+          },
+          "zwave": {
+            "index": 202,
+            "size": 1
+          },
+          "attr": {
+            "min": -50,
+            "max": 50
+          },
+          "type": "number"
+        },
+        {
+          "id": "203",
+          "value": 0,
+          "label": {
+            "en": "Luminance sensor calibration"
+          },
+          "hint": {
+            "en": "Luminance sensor calibration.\r\nThe calibration value = standard value - measure value.\r\nE.g.  If measure value =800Lux and the standard value = 750Lux, so the calibration value= 750 – 800= -50 (0xFFCE).\r\nIf the measure value =850Lux and the standard value = 900Lux, so the calibration value= 900 – 850=50 (0x0032)\r\n"
+          },
+          "zwave": {
+            "index": 203,
+            "size": 2
+          },
+          "attr": {
+            "min": -1000,
+            "max": 1000
+          },
+          "type": "number"
+        },
+        {
+          "id": "204",
+          "value": 0,
+          "label": {
+            "en": "Ultraviolet sensor calibration"
+          },
+          "hint": {
+            "en": "Ultraviolet sensor calibration.\r\nThe calibration value = standard value - measure value.\r\nE.g.  If measure value =9 and the standard value = 8, so the calibration value= 8 – 9= -1 (0xFE).\r\nIf the measure value =7 and the standard value = 9, so the calibration value= 9 – 7=2 (0x02).\r\n"
+          },
+          "zwave": {
+            "index": 204,
+            "size": 1
+          },
+          "attr": {
+            "min": -10,
+            "max": 10
+          },
+          "type": "number"
+        },
+        {
+          "id": "252",
+          "value": false,
+          "label": {
+            "en": "Enable/disable all configuration parameters to be locked "
+          },
+          "hint": {
+            "en": "Enable/disable all configuration parameters to be locked."
+          },
+          "zwave": {
+            "index": 252,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "255",
+          "value": false,
+          "label": {
+            "en": "Reset to factory defaults. "
+          },
+          "hint": {
+            "en": "Reset to factory defaults. "
+          },
+          "zwave": {
+            "index": 255,
+            "size": 4
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "3",
+          "value": 240,
+          "label": {
+            "en": "Set the PIR time."
+          },
+          "hint": {
+            "en": "The default PIR time is 4 minutes. The Multisensor will send BASIC SET CC (0x00) to the associated nodes if no motion is triggered again in 4 minutes."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2
+          },
+          "attr": {
+            "min": 10,
+            "max": 3600
+          },
+          "type": "number"
+        },
+        {
+          "id": "39",
+          "value": 20,
+          "label": {
+            "en": "Configure the default low battery value."
+          },
+          "hint": {
+            "en": "Configure the default low battery value. When the current battery level is lower than this value, it will send out the low battery alarm."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 50
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": "5",
+          "label": {
+            "en": "Set the sensitivity of the motion sensor."
+          },
+          "hint": {
+            "en": "This parameter changes the sensitivity level of the motion detector."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Minimum Sensitivity"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Sensitivity Level 1 of 6"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Sensitivity Level 2 of 6"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Sensitivity Level 3 of 6"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Sensitivity Level 5 of 6"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Maximum Sensitivity"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "40",
+          "value": false,
+          "label": {
+            "en": "Enable/disable the selective reporting only when measurements reach a certain threshold or percentage"
+          },
+          "hint": {
+            "en": "Enable/disable the selective reporting only when measurements reach a certain threshold or percentage. This is used to reduce network traffic.  \r\nNote: If USB power, the Sensor will check the threshold every 10 seconds. If battery power, the Sensor will check the threshold when it is waken up."
+          },
+          "zwave": {
+            "index": 40,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "41",
+          "value": 20,
+          "label": {
+            "en": "Threshold change in temperature to induce an automatic report. "
+          },
+          "hint": {
+            "en": "Threshold change in temperature to induce an automatic report. \r\nNote:\r\n1.\tThe unit is Fahrenheit for US version, Celsius for EU/AU version.\r\n2.\tHigh byte is the threshold value. Low byte is the unit (0x01=Celsius, 0x02=Fahrenheit).\r\n3.\tThe threshold value (high byte) contains one decimal point. E.g. if the value is set to 20 (0x001401), the threshold value =2.0 ℃ (EU/AU version) or if the value is set to 20 (0x001402), the threshold value= 2.0 ℉ (US version). When the current temperature gap is more then 2.0, which will induce a temperature report to be sent out."
+          },
+          "zwave": {
+            "index": 41,
+            "size": 4
+          },
+          "attr": {
+            "min": 10,
+            "max": 2120
+          },
+          "type": "number"
+        },
+        {
+          "id": "42",
+          "value": 10,
+          "label": {
+            "en": "Threshold change in humidity to induce an automatic report"
+          },
+          "hint": {
+            "en": "Threshold change in humidity to induce an automatic report.\r\nNote:\r\n1.\tThe unit is %.\r\n2.\tThe default value is 10, which means that if the current humidity gap is more than 10%, it will send out a humidity report.\r\n"
+          },
+          "zwave": {
+            "index": 42,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "43",
+          "value": 100,
+          "label": {
+            "en": "Threshold change in luminance to induce an automatic report."
+          },
+          "hint": {
+            "en": "Threshold change in luminance to induce an automatic report."
+          },
+          "zwave": {
+            "index": 43,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 30000
+          },
+          "type": "number"
+        },
+        {
+          "id": "44",
+          "value": 10,
+          "label": {
+            "en": "Threshold change in battery level to induce an automatic report."
+          },
+          "hint": {
+            "en": "Threshold change in battery level to induce an automatic report.\r\nNote:\r\n1.\tThe unit is %.\r\n2.\tThe default value is 10, which means that if the current battery level gap is more than 10%, it will send out a battery report.\r\n"
+          },
+          "zwave": {
+            "index": 44,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "45",
+          "value": 2,
+          "label": {
+            "en": "Threshold change in ultraviolet to induce an automatic report."
+          },
+          "hint": {
+            "en": "Threshold change in ultraviolet to induce an automatic report."
+          },
+          "zwave": {
+            "index": 45,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 11
+          },
+          "type": "number"
+        },
+        {
+          "id": "46",
+          "value": "0",
+          "label": {
+            "en": "Enable/disable to send the alarm report of low temperature"
+          },
+          "hint": {
+            "en": "Enable/disable to send the alarm report of low temperature(<-15℃).\r\nNote:\r\nIf it is enabled, the MultiSensor will send a report of Multi Level Temperature CC to controller when the current temperature is less than -15℃)."
+          },
+          "zwave": {
+            "index": 46,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disable"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enable."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Available rang is 1LUX to 30000LUX."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "48",
+          "value": false,
+          "label": {
+            "en": "Enable/disable to send a report when the measurement is more than the upper limit value or less than the lower limit value."
+          },
+          "hint": {
+            "en": "Enable/disable to send a report when the measurement is more than the upper limit value or less than the lower limit value."
+          },
+          "zwave": {
+            "index": 48,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "49",
+          "value": 824,
+          "label": {
+            "en": "Set the upper limit value of temperature sensor. "
+          },
+          "hint": {
+            "en": "Set the upper limit value of temperature sensor.  When the measurement is more than this upper limit, which will trigger to sent out a sensor report.  \r\n\r\n"
+          },
+          "zwave": {
+            "index": 49,
+            "size": 4
+          },
+          "attr": {
+            "min": -400,
+            "max": 2120
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": true,
+          "label": {
+            "en": "Which command would be sent when the motion sensor triggered."
+          },
+          "hint": {
+            "en": "To set which command would be sent when the motion sensor triggered."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "50",
+          "value": 320,
+          "label": {
+            "en": "Set the lower limit value of temperature sensor."
+          },
+          "hint": {
+            "en": "Set the lower limit value of temperature sensor. When the measurement is less than this lower limit, which will trigger to sent out a sensor report.  \r\nHigh byte is the lower limit value."
+          },
+          "zwave": {
+            "index": 50,
+            "size": 4
+          },
+          "attr": {
+            "min": -400,
+            "max": 2120
+          },
+          "type": "number"
+        },
+        {
+          "id": "51",
+          "value": 60,
+          "label": {
+            "en": "Set the upper limit value of humidity sensor. "
+          },
+          "hint": {
+            "en": "Set the upper limit value of humidity sensor. when the measurement is more than this upper limit, which will trigger to sent out a sensor report.  "
+          },
+          "zwave": {
+            "index": 51,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "52",
+          "value": 50,
+          "label": {
+            "en": "Set the lower limit value of humidity sensor."
+          },
+          "hint": {
+            "en": "Set the lower limit value of humidity sensor. When the measurement is less than this lower limit, which will trigger to sent out a sensor report. "
+          },
+          "zwave": {
+            "index": 52,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "53",
+          "value": 1000,
+          "label": {
+            "en": "Set the upper limit value of Lighting sensor"
+          },
+          "hint": {
+            "en": "Set the upper limit value of Lighting sensor. When the measurement is more than this upper limit, which will trigger to sent out a sensor report.  "
+          },
+          "zwave": {
+            "index": 53,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 30000
+          },
+          "type": "number"
+        },
+        {
+          "id": "54",
+          "value": 100,
+          "label": {
+            "en": "Set the lower limit value of Lighting sensor."
+          },
+          "hint": {
+            "en": "Set the lower limit value of Lighting sensor. When the measurement is less than this lower limit, which will trigger to sent out a sensor report.  "
+          },
+          "zwave": {
+            "index": 54,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 30000
+          },
+          "type": "number"
+        },
+        {
+          "id": "55",
+          "value": 8,
+          "label": {
+            "en": "Set the upper limit value of ultraviolet sensor."
+          },
+          "hint": {
+            "en": "Set the upper limit value of ultraviolet sensor. When the measurement is more than this upper limit, which will trigger to sent out a sensor report. "
+          },
+          "zwave": {
+            "index": 55,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 11
+          },
+          "type": "number"
+        },
+        {
+          "id": "56",
+          "value": 4,
+          "label": {
+            "en": "Set the lower limit value of ultraviolet sensor."
+          },
+          "hint": {
+            "en": "Set the lower limit value of ultraviolet sensor. When the measurement is less than this upper limit, which will trigger to sent out a sensor report."
+          },
+          "zwave": {
+            "index": 56,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 11
+          },
+          "type": "number"
+        },
+        {
+          "id": "57",
+          "value": 20,
+          "label": {
+            "en": "Set the recover limit value of temperature sensor."
+          },
+          "hint": {
+            "en": "Note:\r\n1.\tWhen the current measurement <= (Upper limit – Recover limit), the upper limit report is enabled and then it would send out a sensor report when the next measurement is more than the upper limit. After that the upper limit report would be disabled again until the measurement <= (Upper limit – Recover limit).\r\n2.\tWhen the current measurement >= (Lower limit + Recover limit), the lower limit report is enabled and then it would send out a sensor report when the next measurement is less than the lower limit. After that the lower limit report would be disabled again until the measurement >= (Lower limit + Recover limit).\r\n3.\tHigh byte is the recover limit value. Low byte is the unit (0x01=Celsius, 0x02=Fahrenheit).\r\n"
+          },
+          "zwave": {
+            "index": 57,
+            "size": 2
+          },
+          "attr": {
+            "min": 10,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "58",
+          "value": 5,
+          "label": {
+            "en": "Set the recover limit value of humidity sensor."
+          },
+          "hint": {
+            "en": "Set the recover limit value of humidity sensor.\r\nNote:\r\n1.\tWhen the current measurement <= (Upper limit – Recover limit), the upper limit report is enabled and then it would send out a sensor report when the next measurement is more than the upper limit. After that the upper limit report would be disabled again until the measurement <= (Upper limit – Recover limit).\r\n2.\tWhen the current measurement >= (Lower limit + Recover limit), the lower limit report is enabled and then it would send out a sensor report when the next measurement is less than the lower limit. After that the lower limit report would be disabled again until the measurement >= (Lower limit + Recover limit).\r\n"
+          },
+          "zwave": {
+            "index": 58,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 50
+          },
+          "type": "number"
+        },
+        {
+          "id": "59",
+          "value": 100,
+          "label": {
+            "en": "Set the recover limit value of Lighting sensor."
+          },
+          "hint": {
+            "en": "Set the recover limit value of Lighting sensor.\r\nNote:\r\n1.\tWhen the current measurement <= (Upper limit – Recover limit), the upper limit report is enabled and then it would send out a sensor report when the next measurement is more than the upper limit. After that the upper limit report would be disabled again until the measurement <= (Upper limit – Recover limit).\r\n2.\tWhen the current measurement >= (Lower limit + Recover limit), the lower limit report is enabled and then it would send out a sensor report when the next measurement is less than the lower limit. After that the lower limit report would be disabled again until the measurement >= (Lower limit + Recover limit).\r\n3.\tUnit = 10×Recover limit (Lux)\r\n"
+          },
+          "zwave": {
+            "index": 59,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "60",
+          "value": "2",
+          "label": {
+            "en": "Set the recover limit value of Ultraviolet sensor."
+          },
+          "hint": {
+            "en": "Set the recover limit value of Ultraviolet sensor.\r\nNote:\r\n1.\tWhen the current measurement <= (Upper limit – Recover limit), the upper limit report is enabled and then it would send out a sensor report when the next measurement is more than the upper limit. After that the upper limit report would be disabled again until the measurement <= (Upper limit – Recover limit).\r\n2.\tWhen the current measurement >= (Lower limit + Recover limit), the lower limit report is enabled and then it would send out a sensor report when the next measurement is less than the lower limit. After that the lower limit report would be disabled again until the measurement >= (Lower limit + Recover limit).\r\n"
+          },
+          "zwave": {
+            "index": 60,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "USB power mode"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Available rang is 1 to 5."
+              }
+            },
+            {
+              "id": "256",
+              "label": {
+                "en": "Keep sleep state for Battery power mode"
+              }
+            },
+            {
+              "id": "257",
+              "label": {
+                "en": "Keep awake for 10 minutes for battery power mode."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "61",
+          "value": "0",
+          "label": {
+            "en": "Get the out-of-limit state of the Sensors."
+          },
+          "hint": {
+            "en": "Get the out-of-limit state of the Sensors."
+          },
+          "zwave": {
+            "index": 61,
+            "size": 2
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Temperature sensor is out of the lower limit"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Humidity sensor is out of the lower limit"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Luminance sensor is out of the lower limit"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Ultraviolet sensor is out of the lower limit"
+              }
+            },
+            {
+              "id": "16",
+              "label": {
+                "en": "Temperature sensor is out of the upper limit"
+              }
+            },
+            {
+              "id": "32",
+              "label": {
+                "en": "Humidity sensor is out of the upper limit"
+              }
+            },
+            {
+              "id": "64",
+              "label": {
+                "en": "Luminance sensor is out of the upper limit"
+              }
+            },
+            {
+              "id": "128",
+              "label": {
+                "en": "Ultraviolet sensor is out of the upper limit"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "64",
+          "value": true,
+          "label": {
+            "en": "Set the default unit of the automatic temperature report in parameter 101-103."
+          },
+          "hint": {
+            "en": "Set the default unit of the automatic temperature report in parameter 101-103."
+          },
+          "zwave": {
+            "index": 64,
+            "size": 1
+          },
+          "type": "checkbox"
+        },
+        {
+          "id": "8",
+          "value": 30,
+          "label": {
+            "en": "Set the timeout of awake after the Wake Up CC is sent out.."
+          },
+          "hint": {
+            "en": "Set the timeout of awake after the Wake Up CC is sent out.."
+          },
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "attr": {
+            "min": 8,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "81",
+          "value": "0",
+          "label": {
+            "en": "Enable/disable the LED blinking "
+          },
+          "hint": {
+            "en": "Enable/disable the LED blinking."
+          },
+          "zwave": {
+            "index": 81,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Enable."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Disable, only when the PIR is triggered"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Disable, when PIR, wakeup or sensor report is/are triggered"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "9",
+          "value": "0",
+          "label": {
+            "en": "Report the current power mode and the product state for battery power mode"
+          },
+          "hint": {
+            "en": "Report the current power mode and the product state for battery power mode.\r\nNote: this parameter cannot be used as Set usage."
+          },
+          "zwave": {
+            "index": 9,
+            "size": 2
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "USB power mode"
+              }
+            },
+            {
+              "id": "256",
+              "label": {
+                "en": "Keep sleep state for Battery power mode"
+              }
+            },
+            {
+              "id": "257",
+              "label": {
+                "en": "Keep awake for 10 minutes for battery power mode."
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ]
+    }
+  ]
 }
