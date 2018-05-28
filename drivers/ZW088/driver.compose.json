@@ -1,0 +1,58 @@
+{
+  "id": "ZW088",
+  "name": {
+    "en": "Key Fob"
+  },
+  "class": "button",
+  "capabilities": [
+    "measure_battery"
+  ],
+  "images": {
+    "large": "{{driverAssetsPath}}/images/large.png",
+    "small": "{{driverAssetsPath}}/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 134,
+    "productTypeId": [
+      1,
+      257,
+      513
+    ],
+    "productId": [
+      22,
+      88
+    ],
+    "zwaveAllianceProductId": 1178,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1178/Instructions - Aeon Labs Key Fob Gen5 MCert.pdf",
+    "learnmode": {
+      "image": "{{driverAssetsPath}}/learnmode.svg",
+      "instruction": {
+        "en": "Short press the \"Include\" button on the {{driverNameEn}}",
+        "nl": "Druk kort op de \"Include\" knop op de {{driverNameNl}}"
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "Short press the \"Exclude\" button on the {{driverNameEn}}",
+        "nl": "Druk kort op de \"Exclude\" knop op de {{driverNameNl}}"
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Key Fob is in Scene Mode, pressing the control button, which will send the corresponding Scene id to the associated nodes. "
+        }
+      }
+    },
+    "defaultConfiguration": [
+      {
+        "id": 250,
+        "size": 1,
+        "value": 1
+      }
+    ]
+  }
+}
