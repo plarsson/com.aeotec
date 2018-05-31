@@ -40,5 +40,146 @@
         "email": "jolnyx@gmail.com"
       }
     ]
-  }
+  },
+  "drivers": [
+    {
+      "id": "ZW112",
+      "name": {
+        "en": "Door/Window Sensor 6"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_contact"
+      ],
+      "images": {
+        "large": "/drivers/ZW112/assets/images/large.png",
+        "small": "/drivers/ZW112/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          2,
+          2562
+        ],
+        "productId": [
+          112
+        ],
+        "zwaveAllianceProductId": 2770,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2770/Door Window Sensor 6 manual.pdf",
+        "learnmode": {
+          "image": "/drivers/ZW112/assets/learnmode.svg",
+          "instruction": {
+            "en": "Short press the action button on the back of the Door/Window Sensor 6.",
+            "nl": "Druk kort op de actie knop op de achterkant van de Door/Window Sensor 6."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate. The sensor binary report, basic set or notification report command can be sent in this group when the Sensor is triggered.",
+              "nl": "Groep 1 is toegewezen aan de Lifeline associatie groep en elk apparaat heeft 5 nodes om te associëren. Sensory binary report, basic set of notification report commando's kunnen worden verstuurd in deze groep wanneer de sensor wordt getriggered."
+            }
+          }
+        }
+      },
+      "settings": [
+        {
+          "id": "1",
+          "type": "dropdown",
+          "label": {
+            "en": "Sensor Behaviour",
+            "nl": "Sensor Gedrag"
+          },
+          "hint": {
+            "en": "This parameter (1) determines when the sensor triggers the contact alarm.",
+            "nl": "Deze parameter (1) bepaalt wanneer het contact alarm van de sensor afgaat."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "value": "0",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No contact = on, contact = off",
+                "nl": "Geen contact = aan, contact = uit"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "No contact = off, contact = on",
+                "nl": "Geen contact = uit, contact = aan"
+              }
+            }
+          ]
+        },
+        {
+          "id": "101",
+          "type": "checkbox",
+          "label": {
+            "en": "Low battery warning",
+            "nl": "Lege batterij waarschuwing"
+          },
+          "hint": {
+            "en": "This parameter (101) determines whether or not the device sends battery warnings.",
+            "nl": "Deze parameter (101) bepaalt of het apparaat batterij waarschuwingen verstuurd."
+          },
+          "zwave": {
+            "index": 101,
+            "size": 1
+          },
+          "value": true
+        },
+        {
+          "id": "111",
+          "type": "number",
+          "label": {
+            "en": "Low battery checking interval",
+            "nl": "Laag batterij niveau check interval"
+          },
+          "hint": {
+            "en": "This parameter (111) determines the interval at which the battery level will be checked. First 10 values are seconds, from there on out it adjusts per 4 minutes.",
+            "nl": "Deze parameter (111) bepaalt het interval waarop de battery wordt gecontroleerd. De eerste 10 waardes zijn in seconden, daarna past deze aan per 4 minuten."
+          },
+          "zwave": {
+            "index": 111,
+            "size": 4
+          },
+          "attr": {
+            "min": 0,
+            "max": 2147483647
+          },
+          "value": 86640
+        },
+        {
+          "id": 39,
+          "type": "number",
+          "label": {
+            "en": "Low battery value",
+            "nl": "Laag batterij niveau waarde"
+          },
+          "hint": {
+            "en": "This parameter (39) determines at which level the low battery alarm will go off.",
+            "nl": "Deze parameter (39) bepaalt op welk batterijniveau het lage niveau alarm afgaat."
+          },
+          "zwave": {
+            "index": 39,
+            "size": 1
+          },
+          "attr": {
+            "min": 10,
+            "max": 50
+          },
+          "value": 20
+        }
+      ]
+    }
+  ]
 }
