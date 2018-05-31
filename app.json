@@ -40,5 +40,297 @@
         "email": "jolnyx@gmail.com"
       }
     ]
-  }
+  },
+  "flow": {
+    "actions": [
+      {
+        "id": "ZW080-turn_alarm_on",
+        "title": {
+          "en": "Turn siren on",
+          "nl": "Zet sirene aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          }
+        ]
+      },
+      {
+        "id": "ZW080-turn_alarm_off",
+        "title": {
+          "en": "Turn siren off",
+          "nl": "Zet sirene uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          }
+        ]
+      },
+      {
+        "id": "ZW080-set_alarm",
+        "title": {
+          "en": "Set alarm sound",
+          "nl": "Zet alarm geluid"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=ZW080"
+          },
+          {
+            "name": "sound",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "256",
+                "label": {
+                  "en": "Sound 1",
+                  "nl": "Geluid 1"
+                }
+              },
+              {
+                "id": "512",
+                "label": {
+                  "en": "Sound 2",
+                  "nl": "Geluid 2"
+                }
+              },
+              {
+                "id": "768",
+                "label": {
+                  "en": "Sound 3",
+                  "nl": "Geluid 3"
+                }
+              },
+              {
+                "id": "1024",
+                "label": {
+                  "en": "Sound 4",
+                  "nl": "Geluid 4"
+                }
+              },
+              {
+                "id": "1280",
+                "label": {
+                  "en": "Sound 5",
+                  "nl": "Geluid 5"
+                }
+              }
+            ]
+          },
+          {
+            "name": "volume",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "Low volume",
+                  "nl": "Laag volume"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Middle volume",
+                  "nl": "Middel volume"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "High volume",
+                  "nl": "Hoog volume"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "ZW080",
+      "name": {
+        "en": "Siren Gen5",
+        "nl": "Sirene Gen5"
+      },
+      "class": "other",
+      "capabilities": [
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/ZW080/assets/images/large.png",
+        "small": "/drivers/ZW080/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": [
+          4,
+          516
+        ],
+        "productId": [
+          80
+        ],
+        "zwaveAllianceProductId": 1141,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1141/Siren Gen5 Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Press the action button on the Siren Gen5",
+            "nl": "Druk op de actie knop op de Sirene Gen5"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Group 1 is assigned to the Lifeline association group and every device has 5 nodes to associate.\nWhen the Siren is received the commands sent by controller to be turned on or off, the Siren will send a basic report of its status to the nodes in association group 1. To change what kind of signal is sent to the nodes in group 1, please see the detailed description of configuration parameter 80.\n"
+            }
+          }
+        },
+        "defaultConfiguration": [
+          {
+            "id": 80,
+            "size": 1,
+            "value": 2
+          }
+        ]
+      },
+      "settings": [
+        {
+          "id": "37",
+          "type": "dropdown",
+          "label": {
+            "en": "Siren sound and volume",
+            "nl": "Geluid en volume van sirene"
+          },
+          "hint": {
+            "en": "This parameter (37) determines the sound and volume of the Siren Gen5.",
+            "nl": "Deze parameter (37) bepaalt het geluid en het volume van de Sirene Gen5."
+          },
+          "zwave": {
+            "index": 37,
+            "size": 2
+          },
+          "value": "259",
+          "values": [
+            {
+              "id": "257",
+              "label": {
+                "en": "Sound 1 (low volume)",
+                "nl": "Geluid 1 (laag volume)"
+              }
+            },
+            {
+              "id": "258",
+              "label": {
+                "en": "Sound 1 (medium volume)",
+                "nl": "Geluid 1 (middel volume)"
+              }
+            },
+            {
+              "id": "259",
+              "label": {
+                "en": "Sound 1 (high volume)",
+                "nl": "Geluid 1 (hoog volume)"
+              }
+            },
+            {
+              "id": "513",
+              "label": {
+                "en": "Sound 2 (low volume)",
+                "nl": "Geluid 2 (laag volume)"
+              }
+            },
+            {
+              "id": "514",
+              "label": {
+                "en": "Sound 2 (medium volume)",
+                "nl": "Geluid 2 (middel volume)"
+              }
+            },
+            {
+              "id": "515",
+              "label": {
+                "en": "Sound 2 (high volume)",
+                "nl": "Geluid 2 (hoog volume)"
+              }
+            },
+            {
+              "id": "769",
+              "label": {
+                "en": "Sound 3 (low volume)",
+                "nl": "Geluid 3 (laag volume)"
+              }
+            },
+            {
+              "id": "770",
+              "label": {
+                "en": "Sound 3 (medium volume)",
+                "nl": "Geluid 3 (middel volume)"
+              }
+            },
+            {
+              "id": "771",
+              "label": {
+                "en": "Sound 3 (high volume)",
+                "nl": "Geluid 3 (hoog volume)"
+              }
+            },
+            {
+              "id": "1025",
+              "label": {
+                "en": "Sound 4 (low volume)",
+                "nl": "Geluid 4 (laag volume)"
+              }
+            },
+            {
+              "id": "1026",
+              "label": {
+                "en": "Sound 4 (medium volume)",
+                "nl": "Geluid 4 (middel volume)"
+              }
+            },
+            {
+              "id": "1027",
+              "label": {
+                "en": "Sound 4 (high volume)",
+                "nl": "Geluid 4 (hoog volume)"
+              }
+            },
+            {
+              "id": "1281",
+              "label": {
+                "en": "Sound 5 (low volume)",
+                "nl": "Geluid 5 (laag volume)"
+              }
+            },
+            {
+              "id": "1282",
+              "label": {
+                "en": "Sound 5 (medium volume)",
+                "nl": "Geluid 5 (middel volume)"
+              }
+            },
+            {
+              "id": "1283",
+              "label": {
+                "en": "Sound 5 (high volume)",
+                "nl": "Geluid 5 (hoog volume)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
