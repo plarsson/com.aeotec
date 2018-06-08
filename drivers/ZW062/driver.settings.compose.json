@@ -1,0 +1,419 @@
+[
+  {
+    "id": "32",
+    "type": "checkbox",
+    "label": {
+      "en": "Enable the start-up ringtone",
+      "nl": "Laat ringtone horen bij opstarten"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the device plays a ringtone on start-up.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het apparaat een ringtone afspeeld bij het opstarten."
+    },
+    "zwave": {
+      "index": 32,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "id": "34",
+    "type": "checkbox",
+    "label": {
+      "en": "Send calibration command on save",
+      "nl": "Stuur kalibratie commando bij het opslaan"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) commands the device to start the calibration procedure.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) zorgt dat het apparaat het kalibratie process start."
+    },
+    "zwave": {
+      "index": 34,
+      "size": 1
+    },
+    "value": false
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Alarm mode - opening",
+      "nl": "Alarm modus - openen"
+    },
+    "children": [
+      {
+        "id": "371",
+        "type": "number",
+        "label": {
+          "en": "LED blink frequency",
+          "nl": "LED knipper snelheid"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
+        },
+        "zwave": {
+          "index": 371,
+          "size": 4
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 10
+      },
+      {
+        "id": "372",
+        "type": "number",
+        "label": {
+          "en": "Sound number",
+          "nl": "Geluid nummer"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+        },
+        "zwave": {
+          "index": 372,
+          "size": 4
+        },
+        "attr": {
+          "min": 1
+        },
+        "value": 1
+      },
+      {
+        "id": "373",
+        "type": "number",
+        "label": {
+          "en": "Sound volume",
+          "nl": "Volume"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
+        },
+        "zwave": {
+          "index": 373,
+          "size": 4
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 8
+      },
+      {
+        "id": "374",
+        "type": "checkbox",
+        "label": {
+          "en": "Alarm enabled",
+          "nl": "Alarm aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
+        },
+        "zwave": {
+          "index": 374,
+          "size": 4
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Alarm mode - closing",
+      "nl": "Alarm modus - sluiten"
+    },
+    "children": [
+      {
+        "id": "381",
+        "type": "number",
+        "label": {
+          "en": "LED blink frequency",
+          "nl": "LED knipper snelheid"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
+        },
+        "zwave": {
+          "index": 381,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 6
+      },
+      {
+        "id": "382",
+        "type": "number",
+        "label": {
+          "en": "Sound number",
+          "nl": "Geluid nummer"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+        },
+        "zwave": {
+          "index": 382,
+          "size": 1
+        },
+        "attr": {
+          "min": 1
+        },
+        "value": 2
+      },
+      {
+        "id": "383",
+        "type": "number",
+        "label": {
+          "en": "Sound volume",
+          "nl": "Volume"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
+        },
+        "zwave": {
+          "index": 383,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 8
+      },
+      {
+        "id": "384",
+        "type": "checkbox",
+        "label": {
+          "en": "Alarm enabled",
+          "nl": "Alarm aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
+        },
+        "zwave": {
+          "index": 384,
+          "size": 1
+        },
+        "value": true
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Alarm mode - unknown",
+      "nl": "Alarm modus - onbekend"
+    },
+    "children": [
+      {
+        "id": "391",
+        "type": "number",
+        "label": {
+          "en": "LED blink frequency",
+          "nl": "LED knipper snelheid"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
+        },
+        "zwave": {
+          "index": 391,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 4
+      },
+      {
+        "id": "392",
+        "type": "number",
+        "label": {
+          "en": "Sound number",
+          "nl": "Geluid nummer"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+        },
+        "zwave": {
+          "index": 392,
+          "size": 1
+        },
+        "attr": {
+          "min": 1
+        },
+        "value": 3
+      },
+      {
+        "id": "393",
+        "type": "number",
+        "label": {
+          "en": "Sound volume",
+          "nl": "Volume"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
+        },
+        "zwave": {
+          "index": 393,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 8
+      },
+      {
+        "id": "394",
+        "type": "checkbox",
+        "label": {
+          "en": "Alarm enabled",
+          "nl": "Alarm aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
+        },
+        "zwave": {
+          "index": 394,
+          "size": 1
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "type": "group",
+    "label": {
+      "en": "Alarm mode - closed",
+      "nl": "Alarm modus - gesloten"
+    },
+    "children": [
+      {
+        "id": "401",
+        "type": "number",
+        "label": {
+          "en": "LED blink frequency",
+          "nl": "LED knipper snelheid"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the blinking frequency of the LED light.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de snelheid van het knipperen van de LED."
+        },
+        "zwave": {
+          "index": 391,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 2
+      },
+      {
+        "id": "402",
+        "type": "number",
+        "label": {
+          "en": "Sound number",
+          "nl": "Geluid nummer"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the sound played when the alarm goes off.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het geluid dat afgespeeld wordt wanneer het alarm afgaat."
+        },
+        "zwave": {
+          "index": 402,
+          "size": 1
+        },
+        "attr": {
+          "min": 1
+        },
+        "value": 4
+      },
+      {
+        "id": "403",
+        "type": "number",
+        "label": {
+          "en": "Sound volume",
+          "nl": "Volume"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines the volume of the alarm.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt het volume van het alarm."
+        },
+        "zwave": {
+          "index": 403,
+          "size": 1
+        },
+        "attr": {
+          "min": 1,
+          "max": 10
+        },
+        "value": 8
+      },
+      {
+        "id": "404",
+        "type": "checkbox",
+        "label": {
+          "en": "Alarm enabled",
+          "nl": "Alarm aan"
+        },
+        "hint": {
+          "en": "This parameter ({{zwaveParameterIndex}}) determines whether or not the alarm is enabled.",
+          "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt of het alarm aan staat."
+        },
+        "zwave": {
+          "index": 404,
+          "size": 1
+        },
+        "value": false
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "type": "dropdown",
+    "label": {
+      "en": "Command send when state changed",
+      "nl": "Commando wanneer de status is veranderd"
+    },
+    "hint": {
+      "en": "This parameter ({{zwaveParameterIndex}}) determines the command class used when the state of the device has changed.",
+      "nl": "Deze parameter ({{zwaveParameterIndex}}) bepaalt de command class die gebruikt wordt wanneer de status van het apparaat is veranderd."
+    },
+    "zwave": {
+      "index": 80,
+      "size": 1
+    },
+    "value": "2",
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Hail CC"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Barrier operator CC"
+        }
+      }
+    ]
+  }
+]
