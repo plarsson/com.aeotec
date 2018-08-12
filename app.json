@@ -4746,6 +4746,278 @@
           ]
         }
       ]
+    },
+    {
+      "id": "DSC25",
+      "name": {
+        "en": "Smart Energy Illuminator G2"
+      },
+      "zwave": {
+        "manufacturerId": 134,
+        "productTypeId": 3,
+        "productId": 8,
+        "learnmode": {
+          "instruction": {
+            "en": "Press the (action) button on the Smart Energy Illuminator to enter learn mode",
+            "nl": "Druk op de (actie) knop op de Smart Energy Illuminator om de leer modus te activeren"
+          }
+        },
+        "associationGroups": [
+          1,
+          2
+        ],
+        "defaultConfiguration": [
+          {
+            "id": 1,
+            "size": 1,
+            "value": 0
+          },
+          {
+            "id": 101,
+            "size": 4,
+            "value": 10
+          },
+          {
+            "id": 102,
+            "size": 4,
+            "value": 0
+          },
+          {
+            "id": 103,
+            "size": 4,
+            "value": 0
+          },
+          {
+            "id": 111,
+            "size": 4,
+            "value": 600
+          },
+          {
+            "id": 112,
+            "size": 4,
+            "value": 600
+          },
+          {
+            "id": 113,
+            "size": 4,
+            "value": 600
+          }
+        ]
+      },
+      "class": "socket",
+      "capabilities": [
+        "onoff",
+        "dim",
+        "measure_power",
+        "meter_power"
+      ],
+      "images": {
+        "large": "/drivers/DSC25/assets/images/large.png",
+        "small": "/drivers/DSC25/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": 101,
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 1",
+            "nl": "Informatie updates naar associatie groep 1"
+          },
+          "hint": {
+            "en": "Which information needs to be send to devices in association group 1",
+            "nl": "Welke informatie moet naar apparaten in associatie groep 1 worden gestuurd"
+          },
+          "value": "14",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Multilevel Power (Watt)",
+                "nl": "Multilevel Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "14",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 2",
+            "nl": "Informatie updates naar associatie groep 2"
+          },
+          "hint": {
+            "en": "Which information needs to be send to devices in association group 2",
+            "nl": "Welke informatie moet naar apparaten in associatie groep 2 worden gestuurd"
+          },
+          "value": "14",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Multilevel Power (Watt)",
+                "nl": "Multilevel Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "14",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "type": "dropdown",
+          "label": {
+            "en": "Information reports send to association group 3",
+            "nl": "Informatie updates naar associatie groep 3"
+          },
+          "hint": {
+            "en": "Which information needs to be send to devices in association group 3",
+            "nl": "Welke informatie moet naar apparaten in associatie groep 3 worden gestuurd"
+          },
+          "value": "14",
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Nothing",
+                "nl": "Geen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Multilevel Power (Watt)",
+                "nl": "Multilevel Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Power (Watt)",
+                "nl": "Vermogen (Watt)"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Energy (kWh)",
+                "nl": "Energie (kWh)"
+              }
+            },
+            {
+              "id": "14",
+              "label": {
+                "en": "Everything",
+                "nl": "Alles"
+              }
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 1",
+            "nl": "Informatie update interval associatie groep 1"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Energy Illuminator should send an update with new information to Homey",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Energy Illuminator een update met nieuwe informatie naar Homey"
+          },
+          "attr": {
+            "min": 1,
+            "max": 2147483647
+          },
+          "value": 15
+        },
+        {
+          "id": 112,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 2",
+            "nl": "Informatie update interval associatie groep 2"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Energy Illuminator should send an update with new information to devices in association group 2",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Energy Illuminator een update met nieuwe informatie naar apparaten in de tweede associatie group zou moeten sturen"
+          },
+          "attr": {
+            "min": 1,
+            "max": 2147483647
+          },
+          "value": 600
+        },
+        {
+          "id": 113,
+          "type": "number",
+          "label": {
+            "en": "Reporting interval association group 3",
+            "nl": "Informatie update interval associatie groep 3"
+          },
+          "hint": {
+            "en": "This parameter indicates how often the Smart Energy Illuminator should send an update with new information to devices in association group 3",
+            "nl": "Deze parameter geeft aan hoe vaak de Smart Energy Illuminator een update met nieuwe informatie naar apparaten in de derde associatie group zou moeten sturen"
+          },
+          "attr": {
+            "min": 1,
+            "max": 2147483647
+          },
+          "value": 600
+        }
+      ]
     }
   ],
   "flow": {
